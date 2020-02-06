@@ -1,0 +1,28 @@
+{
+  "info": {
+    "name": "Announcement"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "company": {
+      "type": "string"
+    },
+    "announcement": {
+      "type": "text"
+    },
+    "news": {
+      "type": "text"
+    },
+    "movement": {
+      "type": "string"
+    },
+    "date": {
+      "type": "date"
+    }
+  },
+  "connection": "default",
+  "collectionName": "announcements"
+}

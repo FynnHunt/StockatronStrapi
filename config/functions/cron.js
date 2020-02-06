@@ -1,3 +1,5 @@
+const iscraper = require('../../api/i-scraper');
+
 'use strict';
 
 /**
@@ -18,4 +20,19 @@ module.exports = {
   // '0 1 * * 1': () => {
   //
   // }
+  '0 18 * * *': async () => {
+    let result = await iscraper.getEndOfDayResults();
+    let movers = iscraper.getMoversOnly(result);
+
+    movers.forEach(async ann => {
+      console.log(`Movement: ${ann.movement} News: ${ann.news}`);
+      let entity = await strapi.services.announcement.create({
+        "company": ann.company,
+        "announcement": ann.announcement,
+        "news": ann.news,
+        "movement": ann.movement,
+        "date": new Date(),
+      });
+    });
+  }
 };
