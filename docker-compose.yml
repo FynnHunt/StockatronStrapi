@@ -2,7 +2,7 @@ version: '2'
 services:
   web:
     build: .
-    command: npm run develop
+    #command: npm run develop
     volumes:
       - .:/usr/app/
       - ../sqlitedata:/sqlitedata
