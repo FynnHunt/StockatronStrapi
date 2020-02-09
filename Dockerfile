@@ -11,4 +11,4 @@ RUN npm install --quiet
 
 VOLUME ["/sqlitedata"]
 
-CMD "/launch.sh"
+CMD npm run develop
