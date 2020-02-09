@@ -5,7 +5,7 @@ services:
     command: npm run develop
     volumes:
       - .:/usr/app/
-      - /usr/app/node_modules
+      - ../sqlitedata:/sqlitedata
     ports:
       - "1337:1337"
     depends_on:
