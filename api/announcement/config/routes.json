@@ -18,6 +18,14 @@
     },
     {
       "method": "GET",
+      "path": "/announcements/getlist",
+      "handler": "announcement.getList",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
       "path": "/announcements/:id",
       "handler": "announcement.findOne",
       "config": {
