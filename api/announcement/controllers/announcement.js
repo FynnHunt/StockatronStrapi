@@ -24,7 +24,7 @@ module.exports = {
     async getNewsList(ctx) {
         const entities = await strapi.services.announcement.find(ctx.query);
         const annData = entities.map(ann => {
-            if (ann.news) {
+            if (ann.news !== 'N/A') {
                 const movement = getMovement(ann.movement);
                 return { Announcement: ann.news, Movement: movement };
             } else return null;
