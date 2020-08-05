@@ -18,8 +18,16 @@
     },
     {
       "method": "GET",
-      "path": "/announcements/getlist",
-      "handler": "announcement.getList",
+      "path": "/announcements/getAnnlist",
+      "handler": "announcement.getAnnList",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/announcements/getNewsList",
+      "handler": "announcement.getNewsList",
       "config": {
         "policies": []
       }
